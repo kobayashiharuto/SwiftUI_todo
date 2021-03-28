@@ -32,8 +32,10 @@ struct TaskDetailView: View {
 }
 
 struct TaskDetailView_Previews: PreviewProvider {
+  static var tasks = TaskController().tasks
+  
   static var previews: some View {
-    TaskDetailView(task: Task(id: 1, title: "Study"))
+    TaskDetailView(task: tasks[0])
       .environmentObject(TaskController())
   }
 }

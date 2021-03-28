@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct Task: Hashable, Codable {
-  var id: Int
+  var id: String
   var title: String
   var isDone = false
   // var desc: String
