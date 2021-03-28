@@ -8,9 +8,15 @@
 import Foundation
 import SwiftUI
 
-struct Task: Hashable, Codable {
+class Task: ObservableObject {
   var id: String
   var title: String
+  var desc: String
   var isDone = false
-  // var desc: String
+  
+  init(id: String, title: String, desc: String) {
+    self.id = id
+    self.title = title
+    self.desc = desc
+  }
 }

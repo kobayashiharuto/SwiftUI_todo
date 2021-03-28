@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
   @EnvironmentObject var taskController: TaskController
-  @State var isPresentedAddTaskView = false
+  @State private var isPresentedAddTaskView = false
   
   var body: some View {
     NavigationView {

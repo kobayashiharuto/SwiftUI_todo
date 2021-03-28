@@ -13,9 +13,7 @@ final class TaskController: ObservableObject {
 
 func loadMockTasks() -> [Task] {
   let mockTasks = [
-    Task(id: "task1", title: "Study"),
-    Task(id: "task2", title: "Dance"),
-    Task(id: "task3", title: "Game"),
+    Task(id: "task1", title: "Study", desc: "This task is super important.\nI understand Apple."),
   ]
   
   return mockTasks

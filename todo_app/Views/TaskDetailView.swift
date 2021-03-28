@@ -11,21 +11,22 @@ struct TaskDetailView: View {
   @EnvironmentObject var taskController: TaskController
   var task: Task
   
-  var taskIndex: Int {
-    taskController.tasks.firstIndex(where: {$0.id == task.id})!
+  var index: Int {
+    taskController.tasks.firstIndex(where: { $0.id == task.id })!
   }
   
   var body: some View {
     ScrollView(.vertical) {
-      VStack {
+      VStack (alignment: .leading) {
         HStack {
           Text(task.title).font(.title).bold()
-          CheckButton(isDone: $taskController.tasks[taskIndex].isDone)
+          CheckButton(isDone: $taskController.tasks[index].isDone)
           Spacer()
         }
-        .padding(.horizontal)
-        
+        .padding(.bottom)
+        Text(task.desc)
       }
+      .padding(.horizontal)
       .frame(maxWidth: .infinity)
     }
   }

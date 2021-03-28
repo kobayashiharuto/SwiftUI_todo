@@ -10,7 +10,8 @@ import SwiftUI
 struct TaskAddView: View {
   @Environment(\.presentationMode) var presentationMode
   @EnvironmentObject var taskController: TaskController
-  @State var title: String = ""
+  @State private var title: String = ""
+  @State private var desc: String = ""
   
   var body: some View {
     VStack (alignment: .leading) {
@@ -21,7 +22,7 @@ struct TaskAddView: View {
         Spacer()
         Button(action: {
           let id = NSUUID().uuidString
-          let task = Task(id: id, title: title)
+          let task = Task(id: id, title: title, desc: desc)
           taskController.tasks.append(task)
           self.presentationMode.wrappedValue.dismiss()
         } ) {
@@ -31,8 +32,11 @@ struct TaskAddView: View {
       .padding(.vertical)
       
       Text("Title").font(.title2).bold()
-      
       TextField("Title", text: $title)
+        .textFieldStyle(RoundedBorderTextFieldStyle())
+      
+      Text("Desc").font(.title2).bold()
+      TextField("Desc", text: $desc)
         .textFieldStyle(RoundedBorderTextFieldStyle())
       Spacer()
     }
