@@ -8,10 +8,27 @@
 import SwiftUI
 
 struct ContentView: View {
-  let mockTask = ["aaa", "bbb", "ccc", "ddd", "eee", "fff", "ggg", "hhh", "iii"]
+  @State var mockTask = ["aaa", "bbb", "ccc", "ddd", "eee", "fff", "ggg", "hhh", "iii"]
     var body: some View {
-      List(mockTask, id:\.self) { task in
-        Text(task)
+      NavigationView {
+        List {
+          ForEach(mockTask, id:\.self) { task in
+            NavigationLink(destination: TaskAddView(task: task)) {
+              Text(task)
+            }
+          }
+          .onDelete(perform: { indexSet in
+            mockTask.remove(atOffsets: indexSet)
+          })
+        }
+        .navigationTitle("TODO")
+        .toolbar {
+          ToolbarItem(placement: .navigationBarTrailing) {
+            Button(action: {}) {
+              Image(systemName: "plus")
+            }
+          }
+        }
       }
     }
 }

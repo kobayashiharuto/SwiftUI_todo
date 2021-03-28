@@ -11,6 +11,7 @@
 		76D1A1562610A85000A27BD2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D1A1552610A85000A27BD2 /* ContentView.swift */; };
 		76D1A1582610A85400A27BD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76D1A1572610A85400A27BD2 /* Assets.xcassets */; };
 		76D1A15B2610A85400A27BD2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76D1A15A2610A85400A27BD2 /* Preview Assets.xcassets */; };
+		76D1A1642610BB5500A27BD2 /* TaskAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D1A1632610BB5500A27BD2 /* TaskAddView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		76D1A1572610A85400A27BD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76D1A15A2610A85400A27BD2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		76D1A15C2610A85400A27BD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76D1A1632610BB5500A27BD2 /* TaskAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskAddView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				76D1A1532610A85000A27BD2 /* todo_appApp.swift */,
 				76D1A1552610A85000A27BD2 /* ContentView.swift */,
+				76D1A1632610BB5500A27BD2 /* TaskAddView.swift */,
 				76D1A1572610A85400A27BD2 /* Assets.xcassets */,
 				76D1A15C2610A85400A27BD2 /* Info.plist */,
 				76D1A1592610A85400A27BD2 /* Preview Content */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76D1A1562610A85000A27BD2 /* ContentView.swift in Sources */,
+				76D1A1642610BB5500A27BD2 /* TaskAddView.swift in Sources */,
 				76D1A1542610A85000A27BD2 /* todo_appApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
