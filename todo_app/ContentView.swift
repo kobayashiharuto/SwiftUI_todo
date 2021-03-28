@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+  let mockTask = ["aaa", "bbb", "ccc", "ddd", "eee", "fff", "ggg", "hhh", "iii"]
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+      List(mockTask, id:\.self) { task in
+        Text(task)
+      }
     }
 }
 
