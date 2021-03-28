@@ -15,6 +15,7 @@ struct CheckButton: View {
       isDone.toggle()
     }) {
       Image(systemName: isDone ? "checkmark.circle.fill" : "checkmark.circle")
+        .font(.title2)
     }
   }
 }

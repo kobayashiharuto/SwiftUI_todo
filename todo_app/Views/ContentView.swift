@@ -9,12 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
   @EnvironmentObject var taskController: TaskController
+  @State var isPresentedAddTaskView = false
   
   var body: some View {
     NavigationView {
       List {
         ForEach(taskController.tasks, id:\.self) { task in
-          NavigationLink(destination: TaskAddView(task: task)) {
+          NavigationLink(destination: TaskDetailView(task: task)) {
             Text(task.title)
           }
         }
@@ -22,13 +23,18 @@ struct ContentView: View {
           taskController.tasks.remove(atOffsets: indexSet)
         })
       }
+      .listStyle(InsetListStyle())
       .navigationTitle("TODO")
       .toolbar {
         ToolbarItem(placement: .navigationBarTrailing) {
-          Button(action: {}) {
+          Button(action: { isPresentedAddTaskView.toggle() }) {
             Image(systemName: "plus")
           }
         }
+      }
+      
+      .sheet(isPresented: $isPresentedAddTaskView) {
+        TaskAddView()
       }
     }
   }
