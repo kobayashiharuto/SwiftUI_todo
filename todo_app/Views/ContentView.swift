@@ -21,7 +21,6 @@ struct ContentView: View {
         }
         .onDelete(perform: { indexSet in
           taskController.tasks.remove(atOffsets: indexSet)
-          print("awdawd")
         })
       }
       .listStyle(InsetListStyle())

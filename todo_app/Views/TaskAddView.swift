@@ -25,7 +25,7 @@ struct TaskAddView: View {
           let task = Task(id: id, title: title, desc: desc)
           taskController.tasks.append(task)
           self.presentationMode.wrappedValue.dismiss()
-        } ) {
+        }) {
           Text("Done").bold()
         }
       }
