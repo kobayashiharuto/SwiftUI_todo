@@ -16,12 +16,24 @@ struct TaskDetailView: View {
     ScrollView(.vertical) {
       VStack (alignment: .leading) {
         HStack {
-          Text(task.title).font(.title).bold()
+          Text(task.title)
+            .font(.title)
+            .bold()
           CheckButton(index: index)
           Spacer()
         }
-        .padding(.bottom)
+        Spacer().frame(height: 10)
+        
+        HStack {
+          Image(systemName: "clock")
+          Text(task.createdAtStr)
+        }
+        .font(.subheadline)
+        
+        Divider()
+        
         Text(task.desc)
+          .font(.body)
       }
       .padding(.horizontal)
       .frame(maxWidth: .infinity)

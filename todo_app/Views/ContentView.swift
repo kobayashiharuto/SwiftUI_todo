@@ -14,7 +14,7 @@ struct ContentView: View {
   var body: some View {
     NavigationView {
       List {
-        ForEach(taskController.tasks, id:\.self) { task in
+        ForEach(taskController.tasks) { task in
           NavigationLink(destination: TaskDetailView(index: taskController.tasks.firstIndex(where: { $0.id == task.id } )!, task: task)) {
             Text(task.title)
           }

@@ -9,12 +9,13 @@ import Foundation
 
 final class TaskController: ObservableObject {
   @Published var tasks : [Task] = loadMockTasks()
+  
+  static func loadMockTasks() -> [Task] {
+    let mockTasks = [
+      Task(id: "task1", title: "Study", desc: "This task is super important.\nI understand Apple."),
+    ]
+    return mockTasks
+  }
 }
 
-func loadMockTasks() -> [Task] {
-  let mockTasks = [
-    Task(id: "task1", title: "Study", desc: "This task is super important.\nI understand Apple."),
-  ]
-  
-  return mockTasks
-}
+
