@@ -15,12 +15,13 @@ struct ContentView: View {
     NavigationView {
       List {
         ForEach(taskController.tasks, id:\.self) { task in
-          NavigationLink(destination: TaskDetailView(task: task)) {
+          NavigationLink(destination: TaskDetailView(index: taskController.tasks.firstIndex(where: { $0.id == task.id } )!, task: task)) {
             Text(task.title)
           }
         }
         .onDelete(perform: { indexSet in
           taskController.tasks.remove(atOffsets: indexSet)
+          print("awdawd")
         })
       }
       .listStyle(InsetListStyle())
