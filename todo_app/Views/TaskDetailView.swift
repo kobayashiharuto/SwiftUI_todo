@@ -13,26 +13,29 @@ struct TaskDetailView: View {
   var task: Task
   
   var body: some View {
-    VStack (alignment: .leading) {
-      HStack {
-        Text(task.title)
-          .font(.title)
-          .bold()
-        CheckButton(index: index)
-        Spacer()
+    ScrollView {
+      VStack (alignment: .leading) {
+        HStack {
+          Text(task.title)
+            .font(.title)
+            .bold()
+          CheckButton(index: index)
+          Spacer()
+        }
+        Spacer().frame(height: 10)
+        
+        HStack {
+          Image(systemName: "clock")
+          Text(task.createdAtStr)
+        }
+        .font(.subheadline)
+        
+        Divider()
+        
+        Text(task.desc)
+          .font(.body)
       }
-      Spacer().frame(height: 10)
-      
-      HStack {
-        Image(systemName: "clock")
-        Text(task.createdAtStr)
-      }
-      .font(.subheadline)
-      
-      Divider()
-      
-      Text(task.desc)
-        .font(.body)
+      .padding()
     }
   }
 }

@@ -8,27 +8,25 @@
 import SwiftUI
 
 struct TaskDetailHost: View {
-  @Environment(\.editMode) var editMode
+  @EnvironmentObject var taskController: TaskController
+  @State var isPresentedSheet = false
   var index: Int
-  var task: Task
+  @State var task: Task
   
   var body: some View {
-    ScrollView {
-      VStack {
-        if (editMode?.wrappedValue == .inactive) {
-          TaskDetailView(index: index, task: task)
-        } else {
-          
-        }
-        Spacer()
-      }
-      .padding()
-      .frame(width: .infinity)
-      .toolbar {
-        ToolbarItem(placement: .navigationBarTrailing) {
-          EditButton()
+    TaskDetailView(index: index, task: task)
+    .toolbar {
+      ToolbarItem(placement: .navigationBarTrailing) {
+        Button("Edit") {
+          isPresentedSheet.toggle()
         }
       }
+    }
+    .sheet(isPresented: $isPresentedSheet) {
+      TaskEditView(index: index, task: task)
+        .onDisappear() {
+          task = taskController.tasks[index]
+        }
     }
   }
 }
