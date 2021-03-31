@@ -13,17 +13,22 @@ struct TaskDetailHost: View {
   var task: Task
   
   var body: some View {
-    VStack(alignment: .leading, spacing: 20) {
-      HStack {
+    ScrollView {
+      VStack {
+        if (editMode?.wrappedValue == .inactive) {
+          TaskDetailView(index: index, task: task)
+        } else {
+          
+        }
         Spacer()
-        EditButton()
       }
-      .padding(.horizontal)
-      
-      if (editMode?.wrappedValue == .inactive) {
-        TaskDetailView(index: index, task: task)
+      .padding()
+      .frame(width: .infinity)
+      .toolbar {
+        ToolbarItem(placement: .navigationBarTrailing) {
+          EditButton()
+        }
       }
-      Spacer()
     }
   }
 }

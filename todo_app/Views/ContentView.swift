@@ -24,7 +24,8 @@ struct ContentView: View {
         })
       }
       .listStyle(InsetListStyle())
-      .navigationBarTitle("TODO", displayMode: .inline)
+      .navigationTitle("TODO")
+      .navigationBarTitleDisplayMode(.inline)
       .toolbar {
         ToolbarItem(placement: .navigationBarTrailing) {
           Button(action: { isPresentedAddTaskView.toggle() }) {
