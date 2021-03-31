@@ -16,6 +16,11 @@ final class TaskController: ObservableObject {
     ]
     return mockTasks
   }
+  
+  func updateTask(task: Task) {
+    let index = tasks.firstIndex(where: {$0.id == task.id})!
+    tasks[index] = task
+  }
 }
 
 

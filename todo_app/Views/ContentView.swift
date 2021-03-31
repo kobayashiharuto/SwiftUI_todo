@@ -15,7 +15,7 @@ struct ContentView: View {
     NavigationView {
       List {
         ForEach(taskController.tasks) { task in
-          NavigationLink(destination: TaskDetailView(index: taskController.tasks.firstIndex(where: { $0.id == task.id } )!, task: task)) {
+          NavigationLink(destination: TaskDetailHost(index: taskController.tasks.firstIndex(where: { $0.id == task.id } )!, task: task)) {
             Text(task.title)
           }
         }
@@ -24,7 +24,7 @@ struct ContentView: View {
         })
       }
       .listStyle(InsetListStyle())
-      .navigationTitle("TODO")
+      .navigationBarTitle("TODO", displayMode: .inline)
       .toolbar {
         ToolbarItem(placement: .navigationBarTrailing) {
           Button(action: { isPresentedAddTaskView.toggle() }) {

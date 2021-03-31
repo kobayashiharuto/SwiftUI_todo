@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TaskDetailView: View {
   @EnvironmentObject var taskController: TaskController
-  @State var index: Int
+  var index: Int
   var task: Task
   
   var body: some View {

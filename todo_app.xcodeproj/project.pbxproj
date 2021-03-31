@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		760B6B2926149794002ABD83 /* TaskDetailHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760B6B2826149794002ABD83 /* TaskDetailHost.swift */; };
 		76D1A1542610A85000A27BD2 /* todo_appApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D1A1532610A85000A27BD2 /* todo_appApp.swift */; };
 		76D1A1562610A85000A27BD2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D1A1552610A85000A27BD2 /* ContentView.swift */; };
 		76D1A1582610A85400A27BD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76D1A1572610A85400A27BD2 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		760B6B2826149794002ABD83 /* TaskDetailHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailHost.swift; sourceTree = "<group>"; };
 		76D1A1502610A85000A27BD2 /* todo_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = todo_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76D1A1532610A85000A27BD2 /* todo_appApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todo_appApp.swift; sourceTree = "<group>"; };
 		76D1A1552610A85000A27BD2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				76D1A1552610A85000A27BD2 /* ContentView.swift */,
 				76D1A1632610BB5500A27BD2 /* TaskDetailView.swift */,
 				76D1A1762610E35F00A27BD2 /* TaskAddView.swift */,
+				760B6B2826149794002ABD83 /* TaskDetailHost.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				76D1A1642610BB5500A27BD2 /* TaskDetailView.swift in Sources */,
 				76D1A16F2610D30400A27BD2 /* TaskModel.swift in Sources */,
 				76D1A16B2610D10300A27BD2 /* CheckButton.swift in Sources */,
+				760B6B2926149794002ABD83 /* TaskDetailHost.swift in Sources */,
 				76D1A1732610D41E00A27BD2 /* TaskController.swift in Sources */,
 				76D1A1542610A85000A27BD2 /* todo_appApp.swift in Sources */,
 			);
